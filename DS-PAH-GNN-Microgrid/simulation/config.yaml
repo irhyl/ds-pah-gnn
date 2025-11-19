@@ -1,0 +1,64 @@
+# DS-PAH-GNN Microgrid Simulation Configuration
+
+# Network configuration
+network:
+  num_nodes: 10
+  topology: "mesh"  # mesh, ring, tree
+  seed: 42
+
+# Power flow solver settings
+powerflow:
+  method: "newton_raphson"
+  max_iterations: 100
+  convergence_tolerance: 1e-6
+  
+  # Voltage limits (per unit)
+  voltage:
+    min: 0.95
+    max: 1.05
+  
+  # Frequency limits (Hz)
+  frequency:
+    min: 49.5
+    max: 50.5
+
+# Thermal limits
+thermal:
+  default_line_capacity: 100  # MW
+  default_transformer_capacity: 150  # MVA
+  contingency_margin: 1.1  # 10% margin for N-1
+
+# Scenario generation
+scenarios:
+  type: "renewable_variation"  # renewable_variation, load_variation, contingency
+  num_scenarios: 10
+  random_seed: 42
+
+# Time series settings
+time_series:
+  num_timesteps: 24  # hourly
+  renewable_profile: "sinusoidal"  # sinusoidal, constant, custom
+  load_profile: "daily"  # daily, seasonal, random
+
+# Visualization settings
+visualization:
+  network_layout: "spring"  # spring, circular, kamada_kawai
+  node_size: 500
+  figsize: [12, 8]
+  show_labels: true
+  dpi: 150
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/microgrid.log"
+
+# Output settings
+output:
+  save_results: true
+  results_dir: "results/"
+  plot_results: true
+  export_formats:
+    - "png"
+    - "pdf"
