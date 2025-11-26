@@ -1,0 +1,118 @@
+# DS-PAH-GNN: Hierarchical DC Microgrid Simulator with Graph Neural Networks
+# Python Package Requirements
+# 
+# Install with: pip install -r requirements.txt
+# Or for development: pip install -r requirements.txt && pip install -e .
+
+# Core Scientific Computing
+numpy>=1.24.0        # Numerical arrays and matrix operations
+scipy>=1.10.0        # Scientific computing (optimization, sparse matrices)
+pandas>=2.0.0        # Data manipulation and analysis
+
+# Networking & Graph Algorithms
+networkx>=3.1        # Graph/network creation and analysis
+graph-tool>=2.55     # High-performance graph algorithms (optional, for large networks)
+
+# Machine Learning & Neural Networks
+torch>=2.0.0         # PyTorch deep learning framework
+torch-geometric>=2.3.0  # Graph neural network library
+scikit-learn>=1.3.0  # Machine learning algorithms and metrics
+tensorboard>=2.12.0  # TensorFlow visualization (for PyTorch logging)
+
+# Data & Scenario Generation
+pyyaml>=6.0         # YAML configuration file parsing
+tqdm>=4.65.0        # Progress bars
+attrs>=23.1.0       # Class creation helpers
+
+# Visualization & Plotting
+matplotlib>=3.7.0    # 2D plotting
+seaborn>=0.12.0      # Statistical visualization
+plotly>=5.14.0       # Interactive visualizations (optional)
+
+# Jupyter & Development
+jupyter>=1.0.0       # Jupyter notebook
+jupyterlab>=4.0.0    # Jupyter Lab IDE
+ipython>=8.12.0      # Interactive Python shell
+
+# Power Systems (Optional but Recommended)
+pandapower>=2.12.0   # Power system analysis library (for validation)
+pypower>=5.1.14      # Power flow calculation library
+matpower-pip>=7.0.1  # MATPOWER for reference (optional)
+
+# Testing & Quality Assurance
+pytest>=7.3.0        # Testing framework
+pytest-cov>=4.1.0    # Coverage reporting
+black>=23.3.0        # Code formatter
+flake8>=6.0.0        # Linter
+mypy>=1.2.0          # Static type checker
+
+# Documentation (Optional)
+sphinx>=6.2.0        # Documentation generator
+sphinx-rtd-theme>=1.2.0  # ReadTheDocs theme
+nbsphinx>=0.8.9      # Jupyter notebook support in Sphinx
+
+# Utilities
+python-dotenv>=1.0.0  # Environment variable management
+requests>=2.31.0     # HTTP requests library
+h5py>=3.8.0          # HDF5 file format support (for large datasets)
+
+# Performance Optimization (Optional)
+numba>=0.57.0        # JIT compilation for numerical functions
+cupy>=12.0.0         # GPU-accelerated NumPy (for CUDA devices)
+jax>=0.4.0           # High-performance numerical computing (optional)
+
+# Development & DevOps
+git>=2.41.0          # Version control (system package)
+docker>=6.0.0        # Container support (optional)
+pre-commit>=3.3.0    # Git hooks for code quality
+
+# Documentation Comments
+# 
+# MANDATORY (MUST HAVE):
+# - numpy, scipy, pandas: Core numerical computing
+# - networkx: Network/graph representation
+# - torch, torch-geometric: GNN implementation
+# - matplotlib, seaborn: Visualization
+# - jupyter, jupyterlab: Interactive notebooks
+#
+# HIGHLY RECOMMENDED (FOR FULL FUNCTIONALITY):
+# - scikit-learn: Machine learning utilities
+# - pyyaml: Configuration file handling
+# - tqdm: Progress bars
+# - pytest: Testing framework
+#
+# OPTIONAL (NICE TO HAVE):
+# - pandapower: Alternative power flow validation
+# - plotly: Interactive visualizations
+# - numba: Performance optimization
+# - cupy: GPU acceleration (requires CUDA)
+#
+# DEVELOPMENT ONLY (NOT NEEDED FOR USAGE):
+# - black, flake8, mypy: Code quality
+# - sphinx: Documentation generation
+# - pre-commit: Automated quality checks
+
+# Installation Instructions:
+# 
+# 1. Basic Installation (Minimal):
+#    pip install numpy scipy pandas networkx torch torch-geometric matplotlib jupyter
+#
+# 2. Full Installation (Recommended):
+#    pip install -r requirements.txt
+#
+# 3. Development Installation (With testing & docs):
+#    pip install -r requirements.txt
+#    pip install pytest pytest-cov black flake8 mypy sphinx sphinx-rtd-theme
+#
+# 4. GPU Support (CUDA 11.8):
+#    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+#    pip install torch-geometric
+#
+# 5. Verify Installation:
+#    python -c "import torch, torch_geometric, networkx, pandas; print('✓ All imports successful')"
+
+# Version Notes:
+# - torch >= 2.0.0: New compilation features and performance improvements
+# - torch-geometric >= 2.3.0: Stable GNN APIs
+# - networkx >= 3.1: Graph generation improvements
+# - pandapower >= 2.12.0: Power system analysis compatibility
