@@ -169,7 +169,10 @@ def main():
     # 6. Visualize the winning topology
     if best_candidate_graph:
         print("\n--- Visualizing Optimal Topology ---")
-        visualize_topology(best_candidate_graph, title=f"Optimal Topology: {best_name}")
+        # Define save path for the paper artifact
+        save_path = os.path.join(script_dir, "research", "optimal_topology.png")
+        os.makedirs(os.path.dirname(save_path), exist_ok=True)
+        visualize_topology(best_candidate_graph, title=f"Optimal Topology: {best_name}", save_path=save_path)
     else:
         print("Could not determine an optimal topology.")
 
