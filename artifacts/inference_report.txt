@@ -1,0 +1,13 @@
+========================================
+   DS-PAH-GNN PERFORMANCE REPORT
+========================================
+Samples Evaluated: 120000
+R² Score:          0.9998 (Target: > 0.90)
+MAE (Mean Abs Err):0.000544 p.u.
+RMSE:              0.000767 p.u.
+Baseline RMSE:     0.053304 p.u. (Naive Mean Predictor)
+Improvement:       98.56% over baseline
+----------------------------------------
+Interpretation:
+Model has learned the physics of power flow.
+========================================
