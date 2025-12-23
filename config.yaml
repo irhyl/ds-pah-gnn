@@ -1,0 +1,16 @@
+# Grid Topology
+num_stations: 5
+chargers_per_station: 4
+pv_per_station: 1       # Solar arrays per station
+storage_per_station: 1  # Battery units per station
+
+# Electrical Parameters (Per Unit System)
+v_source: 1.0          # Base Voltage (e.g., 400V DC)
+r_feeder: 0.02         # Low resistance for main bus connections
+r_branch: 0.05         # Higher resistance for local connections
+r_tie: 0.03            # Resistance for tie-lines (backup connections)
+load_scale: 0.5        # Scaling factor for EV loads
+
+# Simulation Settings
+total_samples: 600000  # Large scale dataset
+output_dir: "./artifacts/dataset"
